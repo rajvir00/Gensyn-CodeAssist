@@ -15,12 +15,12 @@
 
 ---
 
-## STEP 1 — Update and Install Basics
+## STEP 1 - Update and Install Basics
 ```
 sudo apt update && sudo apt install -y python3 python3-pip python3-venv curl git
 ```
 
-## STEP 2 — Install Docker
+## STEP 2 - Install Docker
 
 ```
 sudo apt install -y ca-certificates curl gnupg
@@ -38,8 +38,19 @@ sudo service docker start
 ```
 sudo docker run hello-world
 ```
+## STEP 3 - Install python
 
-## STEP 3 — Install uv (Astral Fast Python Runner)
+```
+sudo apt install python3 python3-pip python3-venv python3-dev -y
+```
+
+**verify python version**
+
+```
+python3 --version
+```
+
+## STEP 4 - Install uv (Astral Fast Python Runner)
 
 ```
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -47,7 +58,7 @@ echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## STEP 4 — Clone and Run CodeAssist
+## STEP 5 - Clone and Run CodeAssist
 
 ### Install 
 ```
@@ -98,7 +109,7 @@ When you paste your Hugging Face token into the terminal, the input will be invi
 <br><br>
 
 
-## STEP 5 — Access from Remote (SSH Tunnel)
+## STEP 6 - Access from Remote (SSH Tunnel)
 
 If CodeAssist runs on a remote server or VPS, you need to forward the ports to your local machine.
 
@@ -108,7 +119,7 @@ ssh -f -N -L 3000:localhost:3000 -L 8000:localhost:8000 -L 8001:localhost:8001 -
 Replace username@your_server_ip with your actual SSH login
 <br>
 
-## STEP 6 — Access CodeAssist in Your Browser
+## STEP 7 - Access CodeAssist in Your Browser
 Once the tunnel is active, open this in your local browser:
 
 ```
